@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-05-12T21:06:29 IST" name="Suite" finished-at="2021-05-12T21:06:46 IST" duration-ms="17301">
+    <groups>
+    </groups>
+    <test started-at="2021-05-12T21:06:29 IST" name="Test" finished-at="2021-05-12T21:06:46 IST" duration-ms="17301">
+      <class name="qa.mobile.AppiumTest">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:qa.mobile.AppiumTest@76c3e77a]" started-at="2021-05-12T21:06:29 IST" name="beforeClass" finished-at="2021-05-12T21:06:37 IST" duration-ms="8563" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="invalidPasswordTest()[pri:0, instance:qa.mobile.AppiumTest@76c3e77a]" started-at="2021-05-12T21:06:37 IST" name="invalidPasswordTest" finished-at="2021-05-12T21:06:41 IST" duration-ms="3915" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidPasswordTest -->
+        <test-method signature="invalidUsernameTest()[pri:0, instance:qa.mobile.AppiumTest@76c3e77a]" started-at="2021-05-12T21:06:41 IST" name="invalidUsernameTest" finished-at="2021-05-12T21:06:43 IST" duration-ms="1325" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidUsernameTest -->
+        <test-method signature="validLoginTest()[pri:0, instance:qa.mobile.AppiumTest@76c3e77a]" started-at="2021-05-12T21:06:43 IST" name="validLoginTest" finished-at="2021-05-12T21:06:46 IST" duration-ms="2998" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLoginTest -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:qa.mobile.AppiumTest@76c3e77a]" started-at="2021-05-12T21:06:46 IST" name="afterClass" finished-at="2021-05-12T21:06:46 IST" duration-ms="449" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- qa.mobile.AppiumTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
