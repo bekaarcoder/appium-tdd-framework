@@ -2,8 +2,8 @@ package com.qa;
 
 import java.io.InputStream;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
@@ -24,7 +24,10 @@ public class BaseTest {
 	
 	protected static AppiumDriver driver;
 	protected static Properties props;
+	protected static HashMap<String, String> strings = new HashMap<String, String>();
 	InputStream inputStream;
+	InputStream stringsInput;
+	TestUtils utils;
 	
 	public BaseTest() {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -32,9 +35,15 @@ public class BaseTest {
 	
 	@Parameters({"platformName", "platformVersion", "deviceName"})
 	@BeforeTest
-	public void setup(String platformName, String platformVersion, String deviceName) {
+	public void setup(String platformName, String platformVersion, String deviceName) throws Exception {
 		try {
 			props = new Properties();
+			
+			String xmlFileName = "static/strings.xml";
+			stringsInput = getClass().getClassLoader().getResourceAsStream(xmlFileName);
+			utils = new TestUtils();
+			strings = utils.parseStringXML(stringsInput);
+			
 			String propFileName = "config.properties";
 			inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
 			props.load(inputStream);
@@ -55,6 +64,13 @@ public class BaseTest {
 			String sessionId = driver.getSessionId().toString();
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			if(inputStream != null) {
+				inputStream.close();
+			}
+			if(stringsInput != null) {
+				stringsInput.close();
+			}
 		}
 	}
 	
