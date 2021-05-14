@@ -7,7 +7,7 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class LoginPage extends BaseTest {
 
-	@AndroidFindBy(accessibility = "test-Username")
+	@AndroidFindBy(accessibility = "test-Username1")
 	private MobileElement usernameField;
 	@AndroidFindBy(accessibility = "test-Password")
 	private MobileElement passwordField;
