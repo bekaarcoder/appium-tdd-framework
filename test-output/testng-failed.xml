@@ -12,8 +12,9 @@
       <class name="com.qa.tests.LoginTests">
         <methods>
           <include name="beforeMethod"/>
-          <include name="invalidUsernameTest"/>
+          <include name="beforeClass"/>
           <include name="setup"/>
+          <include name="validLoginTest"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.qa.tests.LoginTests -->

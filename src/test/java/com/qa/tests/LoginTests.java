@@ -1,8 +1,12 @@
 package com.qa.tests;
 
+import java.io.InputStream;
 import java.lang.reflect.Method;
 
+import org.json.JSONObject;
+import org.json.JSONTokener;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -14,6 +18,25 @@ public class LoginTests extends BaseTest {
 	
 	LoginPage loginPage;
 	ProductsPage productsPage;
+	InputStream dataInput;
+	JSONObject loginData;
+	
+	@BeforeClass
+	public void beforeClass() throws Exception {
+		try {
+			String dataFileName = "data/loginData.json";
+			dataInput = getClass().getClassLoader().getResourceAsStream(dataFileName);
+			JSONTokener tokener = new JSONTokener(dataInput);
+			loginData = new JSONObject(tokener);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if(dataInput != null) {
+				dataInput.close();
+			}
+		}
+		
+	}
 	
 	@BeforeMethod
 	public void beforeMethod(Method m) {
@@ -23,8 +46,8 @@ public class LoginTests extends BaseTest {
 	
 	@Test
 	public void invalidUsernameTest() {
-		loginPage.enterUsername("invalidusername");
-		loginPage.enterPassword("secret_sauce");
+		loginPage.enterUsername(loginData.getJSONObject("invalidUser").getString("username"));
+		loginPage.enterPassword(loginData.getJSONObject("invalidUser").getString("password"));
 		loginPage.pressLoginButton();
 		String actualErrorText = loginPage.getErrorText();
 		String expectedErrorText = "Username and password do not match any user in this service.";
@@ -34,8 +57,8 @@ public class LoginTests extends BaseTest {
 	
 	@Test
 	public void invalidPasswordTest() {
-		loginPage.enterUsername("standard_user");
-		loginPage.enterPassword("invalidpassword");
+		loginPage.enterUsername(loginData.getJSONObject("invalidPassword").getString("username"));
+		loginPage.enterPassword(loginData.getJSONObject("invalidPassword").getString("password"));
 		loginPage.pressLoginButton();
 		String actualErrorText = loginPage.getErrorText();
 		String expectedErrorText = "Username and password do not match any user in this service.";
@@ -45,8 +68,8 @@ public class LoginTests extends BaseTest {
 	
 	@Test
 	public void validLoginTest() {
-		loginPage.enterUsername("standard_user");
-		loginPage.enterPassword("secret_sauce");
+		loginPage.enterUsername(loginData.getJSONObject("validUser").getString("username"));
+		loginPage.enterPassword(loginData.getJSONObject("validUser").getString("password"));
 		productsPage = loginPage.pressLoginButton();
 		String actualHeaderText = productsPage.getHeaderText();
 		String expectedHeaderText = "PRODUCTS";
