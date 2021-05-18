@@ -5,6 +5,7 @@ import java.lang.reflect.Method;
 
 import org.json.JSONObject;
 import org.json.JSONTokener;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -46,24 +47,20 @@ public class ProductTests extends BaseTest {
 	@BeforeMethod
 	public void beforeMethod(Method m) {
 		loginPage = new LoginPage();
-		menuPage = new MenuPage();
 		System.out.println("\n" + "***** Starting test: " + m.getName() + " *****" + "\n");
+		
+		productsPage = loginPage.login(loginData.getJSONObject("validUser").getString("username"), loginData.getJSONObject("validUser").getString("password"));
 	}
 	
 	@Test
 	public void validateProductOnProductsPage() {
 		SoftAssert softAssert = new SoftAssert();
 		
-		productsPage = loginPage.login(loginData.getJSONObject("validUser").getString("username"), loginData.getJSONObject("validUser").getString("password"));
-		
 		String productTitle = productsPage.getProductTitle();
 		softAssert.assertEquals(productTitle, strings.get("product_title"));
 		
 		String productPrice = productsPage.getProductPrice();
 		softAssert.assertEquals(productPrice, strings.get("product_price"));
-		
-		menuPage.pressMenuIcon();
-		loginPage = menuPage.pressLogoutLink();
 		
 		softAssert.assertAll();
 	}
@@ -72,7 +69,6 @@ public class ProductTests extends BaseTest {
 	public void validateProductOnProductDetailsPage() {
 		SoftAssert softAssert = new SoftAssert();
 		
-		productsPage = loginPage.login(loginData.getJSONObject("validUser").getString("username"), loginData.getJSONObject("validUser").getString("password"));
 		productDetailsPage = productsPage.clickProductTitle();
 		
 		String productTitle = productDetailsPage.getProductTitle();
@@ -83,10 +79,14 @@ public class ProductTests extends BaseTest {
 		
 		productsPage = productDetailsPage.clickBackButton();
 		
+		softAssert.assertAll();
+	}
+	
+	@AfterMethod
+	public void afterMethod() {
+		menuPage = new MenuPage();
 		menuPage.pressMenuIcon();
 		loginPage = menuPage.pressLogoutLink();
-		
-		softAssert.assertAll();
 	}
 
 }

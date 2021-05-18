@@ -16,6 +16,7 @@
           <include name="setup"/>
           <include name="beforeMethod"/>
           <include name="validateProductOnProductDetailsPage"/>
+          <include name="afterMethod"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.qa.tests.ProductTests -->
