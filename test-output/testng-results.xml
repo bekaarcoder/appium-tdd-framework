@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-05-14T22:57:46 IST" name="Suite" finished-at="2021-05-14T22:58:07 IST" duration-ms="20514">
+  <suite started-at="2021-05-18T23:52:16 IST" name="Suite" finished-at="2021-05-18T23:52:46 IST" duration-ms="30155">
     <groups>
     </groups>
-    <test started-at="2021-05-14T22:57:46 IST" name="Test" finished-at="2021-05-14T22:58:07 IST" duration-ms="20514">
-      <class name="com.qa.tests.LoginTests">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qa.tests.LoginTests@534a5a98]" started-at="2021-05-14T22:57:46 IST" name="setup" finished-at="2021-05-14T22:57:56 IST" duration-ms="9489" status="PASS">
+    <test started-at="2021-05-18T23:52:16 IST" name="Test" finished-at="2021-05-18T23:52:46 IST" duration-ms="30155">
+      <class name="com.qa.tests.ProductTests">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qa.tests.ProductTests@4f80542f]" started-at="2021-05-18T23:52:16 IST" name="setup" finished-at="2021-05-18T23:52:24 IST" duration-ms="8685" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -28,60 +28,129 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.qa.tests.LoginTests@534a5a98]" started-at="2021-05-14T22:57:56 IST" name="beforeClass" finished-at="2021-05-14T22:57:56 IST" duration-ms="7" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.qa.tests.ProductTests@4f80542f]" started-at="2021-05-18T23:52:24 IST" name="beforeClass" finished-at="2021-05-18T23:52:28 IST" duration-ms="3320" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.qa.tests.LoginTests@534a5a98]" started-at="2021-05-14T22:57:56 IST" name="beforeMethod" finished-at="2021-05-14T22:57:56 IST" duration-ms="243" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.qa.tests.ProductTests@4f80542f]" started-at="2021-05-18T23:52:28 IST" name="beforeMethod" finished-at="2021-05-18T23:52:28 IST" duration-ms="256" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.qa.tests.LoginTests.invalidPasswordTest()]]>
+                <![CDATA[public void com.qa.tests.ProductTests.validateProductOnProductDetailsPage()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="invalidPasswordTest()[pri:0, instance:com.qa.tests.LoginTests@534a5a98]" started-at="2021-05-14T22:57:56 IST" name="invalidPasswordTest" finished-at="2021-05-14T22:58:00 IST" duration-ms="4192" status="PASS">
+        <test-method signature="validateProductOnProductDetailsPage()[pri:0, instance:com.qa.tests.ProductTests@4f80542f]" started-at="2021-05-18T23:52:28 IST" name="validateProductOnProductDetailsPage" finished-at="2021-05-18T23:52:38 IST" duration-ms="9811" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+expected [Sauce Labs Backpack Remove] but found [Sauce Labs Backpack]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [Sauce Labs Backpack Remove] but found [Sauce Labs Backpack]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+at com.qa.tests.ProductTests.validateProductOnProductDetailsPage(ProductTests.java:89)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invalidPasswordTest -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.qa.tests.LoginTests@534a5a98]" started-at="2021-05-14T22:58:00 IST" name="beforeMethod" finished-at="2021-05-14T22:58:00 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- validateProductOnProductDetailsPage -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.qa.tests.ProductTests@4f80542f]" started-at="2021-05-18T23:52:38 IST" name="beforeMethod" finished-at="2021-05-18T23:52:38 IST" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.qa.tests.LoginTests.invalidUsernameTest()]]>
+                <![CDATA[public void com.qa.tests.ProductTests.validateProductOnProductsPage()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="invalidUsernameTest()[pri:0, instance:com.qa.tests.LoginTests@534a5a98]" started-at="2021-05-14T22:58:00 IST" name="invalidUsernameTest" finished-at="2021-05-14T22:58:03 IST" duration-ms="3165" status="PASS">
+        <test-method signature="validateProductOnProductsPage()[pri:0, instance:com.qa.tests.ProductTests@4f80542f]" started-at="2021-05-18T23:52:38 IST" name="validateProductOnProductsPage" finished-at="2021-05-18T23:52:45 IST" duration-ms="7513" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+expected [Sauce Labs Backpack Remove] but found [Sauce Labs Backpack]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [Sauce Labs Backpack Remove] but found [Sauce Labs Backpack]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+at com.qa.tests.ProductTests.validateProductOnProductsPage(ProductTests.java:68)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invalidUsernameTest -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.qa.tests.LoginTests@534a5a98]" started-at="2021-05-14T22:58:03 IST" name="beforeMethod" finished-at="2021-05-14T22:58:03 IST" duration-ms="2" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.qa.tests.LoginTests.validLoginTest()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="validLoginTest()[pri:0, instance:com.qa.tests.LoginTests@534a5a98]" started-at="2021-05-14T22:58:03 IST" name="validLoginTest" finished-at="2021-05-14T22:58:06 IST" duration-ms="2823" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validLoginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.tests.LoginTests@534a5a98]" started-at="2021-05-14T22:58:06 IST" name="tearDown" finished-at="2021-05-14T22:58:07 IST" duration-ms="530" status="PASS">
+        </test-method> <!-- validateProductOnProductsPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.tests.ProductTests@4f80542f]" started-at="2021-05-18T23:52:45 IST" name="tearDown" finished-at="2021-05-18T23:52:46 IST" duration-ms="515" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.tests.LoginTests -->
+      </class> <!-- com.qa.tests.ProductTests -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

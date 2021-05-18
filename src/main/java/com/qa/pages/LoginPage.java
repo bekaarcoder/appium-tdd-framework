@@ -34,5 +34,11 @@ public class LoginPage extends BaseTest {
 	public String getErrorText() {
 		return getAttribute(errorText, "text");
 	}
+	
+	public ProductsPage login(String username, String password) {
+		enterUsername(username);
+		enterPassword(password);
+		return pressLoginButton();
+	}
 
 }

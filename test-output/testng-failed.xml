@@ -9,15 +9,16 @@
     <parameter name="platformName" value="Android"/>
     <parameter name="deviceName" value="Pixel_3"/>
     <classes>
-      <class name="com.qa.tests.LoginTests">
+      <class name="com.qa.tests.ProductTests">
         <methods>
-          <include name="beforeMethod"/>
           <include name="beforeClass"/>
+          <include name="validateProductOnProductsPage"/>
           <include name="setup"/>
-          <include name="validLoginTest"/>
+          <include name="beforeMethod"/>
+          <include name="validateProductOnProductDetailsPage"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.qa.tests.LoginTests -->
+      </class> <!-- com.qa.tests.ProductTests -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

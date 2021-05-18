@@ -16,6 +16,7 @@ import org.testng.annotations.Parameters;
 import com.qa.utils.TestUtils;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.InteractsWithApps;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.remote.MobileCapabilityType;
@@ -96,7 +97,15 @@ public class BaseTest {
 	
 	public String getText(MobileElement e) {
 		waitForVisibility(e);
-		return e.getText();
+		return e.getAttribute("text");
+	}
+	
+	public void closeApp() {
+		((InteractsWithApps) driver).closeApp();
+	}
+	
+	public void launchApp() {
+		((InteractsWithApps) driver).launchApp();
 	}
 	
 	@AfterTest
