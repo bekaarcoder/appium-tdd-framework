@@ -27,6 +27,15 @@ public class ProductDetailsPage extends BaseTest {
 		return getText(productDescription);
 	}
 	
+	public String getProductPrice() {
+		return getText(productPrice);
+	}
+	
+	public ProductDetailsPage scrollToProductPrice() {
+		scrollToElement();
+		return this;
+	}
+	
 	public ProductsPage clickBackButton() {
 		click(backButton);
 		return new ProductsPage();

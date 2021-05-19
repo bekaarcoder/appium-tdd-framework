@@ -12,7 +12,6 @@
       <class name="com.qa.tests.ProductTests">
         <methods>
           <include name="beforeClass"/>
-          <include name="validateProductOnProductsPage"/>
           <include name="setup"/>
           <include name="beforeMethod"/>
           <include name="validateProductOnProductDetailsPage"/>
