@@ -9,9 +9,9 @@
   	<parameter name="deviceName" value="Pixel_3" />
     <classes>
       <class name="com.qa.tests.LoginTests">
-      <methods>
+      <!-- <methods>
       	<include name="invalidUsernameTest" />
-      </methods>
+      </methods> -->
       </class>
       <!-- <class name="com.qa.tests.ProductTests"></class> -->
     </classes>

@@ -49,7 +49,7 @@ public class LoginTests extends BaseTest {
 		loginPage.enterUsername(loginData.getJSONObject("invalidUser").getString("username"));
 		loginPage.enterPassword(loginData.getJSONObject("invalidUser").getString("password"));
 		loginPage.pressLoginButton();
-		String actualErrorText = loginPage.getErrorText() + "toberemoved";
+		String actualErrorText = loginPage.getErrorText();
 		String expectedErrorText = strings.get("err_invalid_username_or_password");
 		System.out.println("Actual error text: " + actualErrorText + "\n" + "Expected error text: " + expectedErrorText);
 		Assert.assertEquals(actualErrorText, expectedErrorText);
@@ -71,7 +71,7 @@ public class LoginTests extends BaseTest {
 		loginPage.enterUsername(loginData.getJSONObject("validUser").getString("username"));
 		loginPage.enterPassword(loginData.getJSONObject("validUser").getString("password"));
 		productsPage = loginPage.pressLoginButton();
-		String actualHeaderText = productsPage.getHeaderText();
+		String actualHeaderText = productsPage.getHeaderText() + "remove this";
 		String expectedHeaderText = strings.get("product_header_title");
 		System.out.println("Actual header text: " + actualHeaderText + "\n" + "Expected header text: " + expectedHeaderText);
 		Assert.assertEquals(actualHeaderText, expectedHeaderText);

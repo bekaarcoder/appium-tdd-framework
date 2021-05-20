@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu May 20 21:25:49 IST 2021</td>
+<td>Started on:</td><td>Thu May 20 22:37:43 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>12 seconds (12451 ms)</td>
+<tr><td>Total time:</td><td>24 seconds (24467 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,27 +75,27 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.qa.tests.LoginTests.invalidUsernameTest()'><b>invalidUsernameTest</b><br>Test class: com.qa.tests.LoginTests<br/>
-<a href="#Output-1243495105" onClick='toggleBox("Output-1243495105", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.qa.tests.LoginTests.validLoginTest()'><b>validLoginTest</b><br>Test class: com.qa.tests.LoginTests<br/>
+<a href="#Output-502102804" onClick='toggleBox("Output-502102804", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1243495105" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1243495105">
+<a href="#Output-502102804" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-502102804">
 This is the sample screenshot.<br/>
-<a href='C:\Users\shash\eclipse-workspace\AppiumTDDFramework\Screenshots\Android_11.0_Pixel_3\2021-05-20-21-25-49\LoginTests\invalidUsernameTest.png'><img src='C:\Users\shash\eclipse-workspace\AppiumTDDFramework\Screenshots\Android_11.0_Pixel_3\2021-05-20-21-25-49\LoginTests\invalidUsernameTest.png' width='200' /></a><br/>
+<a href='C:\Users\shash\eclipse-workspace\AppiumTDDFramework\Screenshots\Android_11.0_Pixel_3\2021-05-20-22-37-43\LoginTests\validLoginTest.png'><img src='C:\Users\shash\eclipse-workspace\AppiumTDDFramework\Screenshots\Android_11.0_Pixel_3\2021-05-20-22-37-43\LoginTests\validLoginTest.png' width='200' /></a><br/>
 </div>
 </td>
-<td><div><pre>java.lang.AssertionError: expected [Username and password do not match any user in this service.] but found [Username and password do not match any user in this service.toberemoved]
-	at com.qa.tests.LoginTests.invalidUsernameTest(LoginTests.java:55)
+<td><div><pre>java.lang.AssertionError: expected [PRODUCTS] but found [PRODUCTSremove this]
+	at com.qa.tests.LoginTests.validLoginTest(LoginTests.java:77)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1243495105", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1243495105'><pre>java.lang.AssertionError: expected [Username and password do not match any user in this service.] but found [Username and password do not match any user in this service.toberemoved]
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace502102804", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace502102804'><pre>java.lang.AssertionError: expected [PRODUCTS] but found [PRODUCTSremove this]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 	at org.testng.Assert.assertEquals(Assert.java:122)
 	at org.testng.Assert.assertEquals(Assert.java:629)
 	at org.testng.Assert.assertEquals(Assert.java:639)
-	at com.qa.tests.LoginTests.invalidUsernameTest(LoginTests.java:55)
+	at com.qa.tests.LoginTests.validLoginTest(LoginTests.java:77)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -125,8 +125,26 @@ This is the sample screenshot.<br/>
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>3</td>
-<td>com.qa.tests.LoginTests@55a147cc</td></tr>
+<td>4</td>
+<td>com.qa.tests.LoginTests@1a6d8329</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.qa.tests.LoginTests.invalidPasswordTest()'><b>invalidPasswordTest</b><br>Test class: com.qa.tests.LoginTests</td>
+<td></td>
+<td>4</td>
+<td>com.qa.tests.LoginTests@1a6d8329</td></tr>
+<tr>
+<td title='com.qa.tests.LoginTests.invalidUsernameTest()'><b>invalidUsernameTest</b><br>Test class: com.qa.tests.LoginTests</td>
+<td></td>
+<td>2</td>
+<td>com.qa.tests.LoginTests@1a6d8329</td></tr>
 </table><p>
 </body>
 </html>
