@@ -49,7 +49,7 @@ public class LoginTests extends BaseTest {
 		loginPage.enterUsername(loginData.getJSONObject("invalidUser").getString("username"));
 		loginPage.enterPassword(loginData.getJSONObject("invalidUser").getString("password"));
 		loginPage.pressLoginButton();
-		String actualErrorText = loginPage.getErrorText();
+		String actualErrorText = loginPage.getErrorText() + "toberemoved";
 		String expectedErrorText = strings.get("err_invalid_username_or_password");
 		System.out.println("Actual error text: " + actualErrorText + "\n" + "Expected error text: " + expectedErrorText);
 		Assert.assertEquals(actualErrorText, expectedErrorText);

@@ -29,6 +29,7 @@ public class BaseTest {
 	protected static AppiumDriver<MobileElement> driver;
 	protected static Properties props;
 	protected static HashMap<String, String> strings = new HashMap<String, String>();
+	protected static String dateTime;
 	InputStream inputStream;
 	InputStream stringsInput;
 	TestUtils utils;
@@ -40,12 +41,13 @@ public class BaseTest {
 	@Parameters({ "platformName", "platformVersion", "deviceName" })
 	@BeforeTest
 	public void setup(String platformName, String platformVersion, String deviceName) throws Exception {
+		utils = new TestUtils();
+		dateTime = utils.getDateTime();
 		try {
 			props = new Properties();
 
 			String xmlFileName = "static/strings.xml";
 			stringsInput = getClass().getClassLoader().getResourceAsStream(xmlFileName);
-			utils = new TestUtils();
 			strings = utils.parseStringXML(stringsInput);
 
 			String propFileName = "config.properties";
@@ -78,6 +80,14 @@ public class BaseTest {
 				stringsInput.close();
 			}
 		}
+	}
+	
+	public AppiumDriver getDriver() {
+		return driver;
+	}
+	
+	public String getDateTime() {
+		return dateTime;
 	}
 
 	public void waitForVisibility(MobileElement e) {
