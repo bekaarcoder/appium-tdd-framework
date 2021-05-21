@@ -11,6 +11,8 @@ import java.util.Map;
 import java.util.Properties;
 
 import org.apache.commons.codec.binary.Base64;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
@@ -42,6 +44,7 @@ public class BaseTest {
 	protected static ThreadLocal<HashMap<String, String>> strings = new ThreadLocal<HashMap<String, String>>();
 	protected static ThreadLocal<String> dateTime = new ThreadLocal<String>();
 	TestUtils utils;
+	static Logger log = LogManager.getLogger(BaseTest.class.getName());
 	
 	public AppiumDriver getDriver() {
 		return driver.get();
