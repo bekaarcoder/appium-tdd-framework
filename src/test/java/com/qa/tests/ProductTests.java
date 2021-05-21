@@ -57,10 +57,10 @@ public class ProductTests extends BaseTest {
 		SoftAssert softAssert = new SoftAssert();
 		
 		String productTitle = productsPage.getProductTitle();
-		softAssert.assertEquals(productTitle, strings.get("product_title"));
+		softAssert.assertEquals(productTitle, getStrings().get("product_title"));
 		
 		String productPrice = productsPage.getProductPrice();
-		softAssert.assertEquals(productPrice, strings.get("product_price"));
+		softAssert.assertEquals(productPrice, getStrings().get("product_price"));
 		
 		softAssert.assertAll();
 	}
@@ -72,14 +72,14 @@ public class ProductTests extends BaseTest {
 		productDetailsPage = productsPage.clickProductTitle();
 		
 		String productTitle = productDetailsPage.getProductTitle();
-		softAssert.assertEquals(productTitle, strings.get("product_title"));
+		softAssert.assertEquals(productTitle, getStrings().get("product_title"));
 		
 		String productDescription = productDetailsPage.getProductDescription();
-		softAssert.assertEquals(productDescription, strings.get("product_description"));
+		softAssert.assertEquals(productDescription, getStrings().get("product_description"));
 		
 		productDetailsPage.scrollToProductPrice();
 		String productPrice = productDetailsPage.getProductPrice();
-		softAssert.assertEquals(productPrice, strings.get("product_price"));
+		softAssert.assertEquals(productPrice, getStrings().get("product_price"));
 		
 		productsPage = productDetailsPage.clickBackButton();
 		

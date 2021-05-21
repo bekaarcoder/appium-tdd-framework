@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.qa.tests.LoginTests" class="method navigator-link" hash-for-method="validLoginTest">validLoginTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -118,12 +104,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.qa.tests.LoginTests" class="method navigator-link" hash-for-method="invalidPasswordTest">invalidPasswordTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.qa.tests.ProductTests" class="method navigator-link" hash-for-method="validateProductOnProductDetailsPage">validateProductOnProductDetailsPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.qa.tests.LoginTests" class="method navigator-link" hash-for-method="invalidUsernameTest">invalidUsernameTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.qa.tests.ProductTests" class="method navigator-link" hash-for-method="validateProductOnProductsPage">validateProductOnProductsPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -138,44 +124,24 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.qa.tests.LoginTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="validLoginTest">
-                  </a> <!-- validLoginTest -->
-                  <span class="method-name">validLoginTest</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [PRODUCTS] but found [PRODUCTSremove this]
-	at com.qa.tests.LoginTests.validLoginTest(LoginTests.java:77)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 33 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.qa.tests.LoginTests</span>
+              <span class="class-name">com.qa.tests.ProductTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="invalidPasswordTest">
-                  </a> <!-- invalidPasswordTest -->
-                  <span class="method-name">invalidPasswordTest</span>
+                  <a name="validateProductOnProductDetailsPage">
+                  </a> <!-- validateProductOnProductDetailsPage -->
+                  <span class="method-name">validateProductOnProductDetailsPage</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="invalidUsernameTest">
-                  </a> <!-- invalidUsernameTest -->
-                  <span class="method-name">invalidUsernameTest</span>
+                  <a name="validateProductOnProductsPage">
+                  </a> <!-- validateProductOnProductsPage -->
+                  <span class="method-name">validateProductOnProductsPage</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -198,7 +164,7 @@
     &lt;parameter name=&quot;platformName&quot; value=&quot;Android&quot;/&gt;
     &lt;parameter name=&quot;deviceName&quot; value=&quot;Pixel_3&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.qa.tests.LoginTests&quot;/&gt;
+      &lt;class name=&quot;com.qa.tests.ProductTests&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -238,24 +204,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'invalidPasswordTest')
-data.setCell(0, 2, 'com.qa.tests.LoginTests')
-data.setCell(0, 3, 4303);
+data.setCell(0, 1, 'validateProductOnProductDetailsPage')
+data.setCell(0, 2, 'com.qa.tests.ProductTests')
+data.setCell(0, 3, 8399);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'validLoginTest')
-data.setCell(1, 2, 'com.qa.tests.LoginTests')
-data.setCell(1, 3, 4092);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'invalidUsernameTest')
-data.setCell(2, 2, 'com.qa.tests.LoginTests')
-data.setCell(2, 3, 2726);
+data.setCell(1, 1, 'validateProductOnProductsPage')
+data.setCell(1, 2, 'com.qa.tests.ProductTests')
+data.setCell(1, 3, 1814);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 11 seconds</span>
+              <span class="suite-total-time">Total running time: 10 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -266,13 +228,6 @@ return data;
             <span class="header-content">Reporter output for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">validLoginTest</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">This is the sample screenshot.</span>
-                <span class="reporter-method-output"><a href='C:\Users\shash\eclipse-workspace\AppiumTDDFramework\Screenshots\Android_11.0_Pixel_3\2021-05-20-22-37-43\LoginTests\validLoginTest.png'><img src='C:\Users\shash\eclipse-workspace\AppiumTDDFramework\Screenshots\Android_11.0_Pixel_3\2021-05-20-22-37-43\LoginTests\validLoginTest.png' width='200' /></a></span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
@@ -288,68 +243,58 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.qa.tests.LoginTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.qa.tests.ProductTests</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setup(Android, 11.0, Pixel_3)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">7093 ms</span>
+                <span class="method-start">11357 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">7113 ms</span>
+                <span class="method-start">13972 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void com.qa.tests.LoginTests.invalidPasswordTest())</span>
-                <span class="method-start">7807 ms</span>
+                <span class="method-name">beforeMethod(public void com.qa.tests.ProductTests.validateProductOnProductDetailsPage())</span>
+                <span class="method-start">14738 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">invalidPasswordTest</span>
-                <span class="method-start">8064 ms</span>
+                <span class="method-name">validateProductOnProductDetailsPage</span>
+                <span class="method-start">18713 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=invalidPasswordTest status=SUCCESS method=LoginTests.invalidPasswordTest()[pri:0, i...)</span>
-                <span class="method-start">12369 ms</span>
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">27121 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=validateProductOnProductDetailsPage status=SUCCESS method=ProductTests.validateProd...)</span>
+                <span class="method-start">30456 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">13356 ms</span>
+                <span class="method-start">32802 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void com.qa.tests.LoginTests.invalidUsernameTest())</span>
-                <span class="method-start">13949 ms</span>
+                <span class="method-name">beforeMethod(public void com.qa.tests.ProductTests.validateProductOnProductsPage())</span>
+                <span class="method-start">33513 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">invalidUsernameTest</span>
-                <span class="method-start">13951 ms</span>
+                <span class="method-name">validateProductOnProductsPage</span>
+                <span class="method-start">35998 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=invalidUsernameTest status=SUCCESS method=LoginTests.invalidUsernameTest()[pri:0, i...)</span>
-                <span class="method-start">16679 ms</span>
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">37813 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">17689 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void com.qa.tests.LoginTests.validLoginTest())</span>
-                <span class="method-start">18271 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">validLoginTest</span>
-                <span class="method-start">18273 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=validLoginTest status=FAILURE method=LoginTests.validLoginTest()[pri:0, instance:co...)</span>
-                <span class="method-start">23531 ms</span>
+                <span class="method-name">afterMethod([TestResult name=validateProductOnProductsPage status=SUCCESS method=ProductTests.validateProductOnP...)</span>
+                <span class="method-start">40192 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">24059 ms</span>
+                <span class="method-start">41859 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

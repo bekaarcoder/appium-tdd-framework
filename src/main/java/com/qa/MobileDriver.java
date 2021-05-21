@@ -4,14 +4,14 @@ import org.openqa.selenium.WebDriver;
 
 public class MobileDriver {
 	
-	 private static WebDriver driver;
+	 private static ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
 
-	    public static WebDriver getDriver(){
-	        return driver;
+	    public static WebDriver getMobileDriver(){
+	        return driver.get();
 	    }
 
-	    public static void setDriver(WebDriver Driver){
-	        driver = Driver;
+	    public static void setMobileDriver(WebDriver Driver){
+	        driver.set(Driver);
 	    }
 
 }

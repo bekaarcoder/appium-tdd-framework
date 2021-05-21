@@ -37,33 +37,66 @@ import okhttp3.internal.platform.Platform;
 
 public class BaseTest {
 
-	protected static AppiumDriver<MobileElement> driver;
-	protected static Properties props;
-	protected static HashMap<String, String> strings = new HashMap<String, String>();
-	protected static String dateTime;
-	InputStream inputStream;
-	InputStream stringsInput;
+	protected static ThreadLocal<AppiumDriver<MobileElement>> driver = new ThreadLocal<AppiumDriver<MobileElement>>();
+	protected static ThreadLocal<Properties> props = new ThreadLocal<Properties>();
+	protected static ThreadLocal<HashMap<String, String>> strings = new ThreadLocal<HashMap<String, String>>();
+	protected static ThreadLocal<String> dateTime = new ThreadLocal<String>();
 	TestUtils utils;
+	
+	public AppiumDriver getDriver() {
+		return driver.get();
+	}
+	
+	public void setDriver(AppiumDriver Driver) {
+		driver.set(Driver);
+	}
+
+	public String getDateTime() {
+		return dateTime.get();
+	}
+	
+	public void setDateTime(String DateTime) {
+		dateTime.set(DateTime);
+	}
+	
+	public Properties getProperties() {
+		return props.get();
+	}
+	
+	public void setProperties(Properties Props) {
+		props.set(Props);;
+	}
+	
+	public HashMap<String, String> getStrings() {
+		return strings.get();
+	}
+	
+	public void setStrings(HashMap<String, String> Strings) {
+		strings.set(Strings);;
+	}
 
 	public BaseTest() {
-		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+		PageFactory.initElements(new AppiumFieldDecorator(getDriver()), this);
 	}
 
 	@Parameters({ "platformName", "platformVersion", "deviceName" })
 	@BeforeTest
 	public void setup(String platformName, String platformVersion, String deviceName) throws Exception {
 		utils = new TestUtils();
-		dateTime = utils.getDateTime();
+		setDateTime(utils.getDateTime());
+		InputStream inputStream = null;
+		InputStream stringsInput = null;
+		Properties props = new Properties();
+		AppiumDriver<MobileElement> driver;
 		try {
-			props = new Properties();
-
 			String xmlFileName = "static/strings.xml";
 			stringsInput = getClass().getClassLoader().getResourceAsStream(xmlFileName);
-			strings = utils.parseStringXML(stringsInput);
+			setStrings(utils.parseStringXML(stringsInput));
 
 			String propFileName = "config.properties";
 			inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
 			props.load(inputStream);
+			setProperties(props);
 
 			DesiredCapabilities caps = new DesiredCapabilities();
 			caps.setCapability(MobileCapabilityType.PLATFORM_NAME, platformName);
@@ -79,8 +112,9 @@ public class BaseTest {
 			URL url = new URL(props.getProperty("appiumURL"));
 
 			driver = new AndroidDriver<MobileElement>(url, caps);
-			MobileDriver.setDriver(driver);
+			MobileDriver.setMobileDriver(driver);;
 			String sessionId = driver.getSessionId().toString();
+			setDriver(driver);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -96,13 +130,13 @@ public class BaseTest {
 	@BeforeMethod
 	public void beforeMethod() {
 		// Start screen recording
-		((CanRecordScreen) driver).startRecordingScreen();
+		((CanRecordScreen) getDriver()).startRecordingScreen();
 	}
 
 	@AfterMethod
 	public void afterMethod(ITestResult result) {
 		// Stop screen recording
-		String media = ((CanRecordScreen) driver).stopRecordingScreen();
+		String media = ((CanRecordScreen) getDriver()).stopRecordingScreen();
 		
 		// Check if test is failing
 		// This check is implemented to store the recorded video only when the test is failing
@@ -130,16 +164,8 @@ public class BaseTest {
 		}
 	}
 
-	public AppiumDriver getDriver() {
-		return driver;
-	}
-
-	public String getDateTime() {
-		return dateTime;
-	}
-
 	public void waitForVisibility(MobileElement e) {
-		WebDriverWait wait = new WebDriverWait(driver, TestUtils.WAIT);
+		WebDriverWait wait = new WebDriverWait(getDriver(), TestUtils.WAIT);
 		wait.until(ExpectedConditions.visibilityOf(e));
 	}
 
@@ -164,22 +190,22 @@ public class BaseTest {
 	}
 
 	public void scrollToElement() {
-		((AndroidDriver<MobileElement>) MobileDriver.getDriver())
+		((AndroidDriver<MobileElement>) MobileDriver.getMobileDriver())
 				.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView("
 						+ "new UiSelector().description(\"test-Price\"));");
 	}
 
 	public void closeApp() {
-		((InteractsWithApps) driver).closeApp();
+		((InteractsWithApps) getDriver()).closeApp();
 	}
 
 	public void launchApp() {
-		((InteractsWithApps) driver).launchApp();
+		((InteractsWithApps) getDriver()).launchApp();
 	}
 
 	@AfterTest
 	public void tearDown() {
-		driver.quit();
+		getDriver().quit();
 	}
 
 }

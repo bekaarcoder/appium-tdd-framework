@@ -8,12 +8,12 @@
   	<parameter name="platformVersion" value="11.0" />
   	<parameter name="deviceName" value="Pixel_3" />
     <classes>
-      <class name="com.qa.tests.LoginTests">
-      <!-- <methods>
+      <!-- <class name="com.qa.tests.LoginTests">
+      <methods>
       	<include name="invalidUsernameTest" />
-      </methods> -->
-      </class>
-      <!-- <class name="com.qa.tests.ProductTests"></class> -->
+      </methods>
+      </class> -->
+      <class name="com.qa.tests.ProductTests"></class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
