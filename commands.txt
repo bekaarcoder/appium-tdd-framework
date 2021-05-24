@@ -1,0 +1,3 @@
+stop appium server
+netstat -ano|findstr "PID :4723"
+taskkill /pid 18264 /f

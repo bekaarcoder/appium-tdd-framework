@@ -9,6 +9,8 @@ import java.util.HashMap;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -52,5 +54,9 @@ public class TestUtils {
 		Date date = new Date();
 		System.out.println(dateFormat.format(date));
 		return dateFormat.format(date);
+	}
+	
+	public Logger log() {
+		return LogManager.getLogger(Thread.currentThread().getStackTrace()[2].getClassName());
 	}
 }

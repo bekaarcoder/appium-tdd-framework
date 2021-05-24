@@ -16,6 +16,7 @@ import com.qa.pages.LoginPage;
 import com.qa.pages.MenuPage;
 import com.qa.pages.ProductDetailsPage;
 import com.qa.pages.ProductsPage;
+import com.qa.utils.TestUtils;
 
 public class ProductTests extends BaseTest {
 	
@@ -25,6 +26,7 @@ public class ProductTests extends BaseTest {
 	MenuPage menuPage;
 	InputStream dataInput;
 	JSONObject loginData;
+	TestUtils utils = new TestUtils();
 	
 	@BeforeClass
 	public void beforeClass() throws Exception {
@@ -47,7 +49,7 @@ public class ProductTests extends BaseTest {
 	@BeforeMethod
 	public void beforeMethod(Method m) {
 		loginPage = new LoginPage();
-		System.out.println("\n" + "***** Starting test: " + m.getName() + " *****" + "\n");
+		utils.log().info("\n" + "***** Starting test: " + m.getName() + " *****" + "\n");
 		
 		productsPage = loginPage.login(loginData.getJSONObject("validUser").getString("username"), loginData.getJSONObject("validUser").getString("password"));
 	}

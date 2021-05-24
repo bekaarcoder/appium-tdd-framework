@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 import com.qa.BaseTest;
 import com.qa.pages.LoginPage;
 import com.qa.pages.ProductsPage;
+import com.qa.utils.TestUtils;
 
 public class LoginTests extends BaseTest {
 	
@@ -20,6 +21,7 @@ public class LoginTests extends BaseTest {
 	ProductsPage productsPage;
 	InputStream dataInput;
 	JSONObject loginData;
+	TestUtils utils = new TestUtils();
 	
 	@BeforeClass
 	public void beforeClass() throws Exception {
@@ -41,7 +43,7 @@ public class LoginTests extends BaseTest {
 	@BeforeMethod
 	public void beforeMethod(Method m) {
 		loginPage = new LoginPage();
-		System.out.println("\n" + "***** Starting test: " + m.getName() + " *****" + "\n");
+		utils.log().info("\n" + "***** Starting test: " + m.getName() + " *****" + "\n");
 	}
 	
 	@Test
@@ -51,7 +53,7 @@ public class LoginTests extends BaseTest {
 		loginPage.pressLoginButton();
 		String actualErrorText = loginPage.getErrorText();
 		String expectedErrorText = getStrings().get("err_invalid_username_or_password");
-		System.out.println("Actual error text: " + actualErrorText + "\n" + "Expected error text: " + expectedErrorText);
+		utils.log().info("Actual error text: " + actualErrorText + "\n" + "Expected error text: " + expectedErrorText);
 		Assert.assertEquals(actualErrorText, expectedErrorText);
 	}
 	
@@ -62,7 +64,7 @@ public class LoginTests extends BaseTest {
 		loginPage.pressLoginButton();
 		String actualErrorText = loginPage.getErrorText();
 		String expectedErrorText = getStrings().get("err_invalid_username_or_password");
-		System.out.println("Actual error text: " + actualErrorText + "\n" + "Expected error text: " + expectedErrorText);
+		utils.log().info("Actual error text: " + actualErrorText + "\n" + "Expected error text: " + expectedErrorText);
 		Assert.assertEquals(actualErrorText, expectedErrorText);
 	}
 	
@@ -73,7 +75,7 @@ public class LoginTests extends BaseTest {
 		productsPage = loginPage.pressLoginButton();
 		String actualHeaderText = productsPage.getHeaderText() + "remove this";
 		String expectedHeaderText = getStrings().get("product_header_title");
-		System.out.println("Actual header text: " + actualHeaderText + "\n" + "Expected header text: " + expectedHeaderText);
+		utils.log().info("Actual header text: " + actualHeaderText + "\n" + "Expected header text: " + expectedHeaderText);
 		Assert.assertEquals(actualHeaderText, expectedHeaderText);
 	}
 

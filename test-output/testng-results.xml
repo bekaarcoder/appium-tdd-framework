@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[This is the sample screenshot.]]>
+    </line>
+    <line>
+      <![CDATA[<a href='C:\Users\shash\eclipse-workspace\AppiumTDDFramework\Screenshots\Android_11.0_Pixel_3\2021-05-24-21-34-09\LoginTests\validLoginTest.png'><img src='C:\Users\shash\eclipse-workspace\AppiumTDDFramework\Screenshots\Android_11.0_Pixel_3\2021-05-24-21-34-09\LoginTests\validLoginTest.png' width='200' /></a>]]>
+    </line>
   </reporter-output>
-  <suite started-at="2021-05-21T23:32:00 IST" name="Suite" finished-at="2021-05-21T23:32:43 IST" duration-ms="42500">
+  <suite started-at="2021-05-24T21:34:09 IST" name="Suite" finished-at="2021-05-24T21:34:57 IST" duration-ms="47933">
     <groups>
     </groups>
-    <test started-at="2021-05-21T23:32:00 IST" name="Test" finished-at="2021-05-21T23:32:43 IST" duration-ms="42500">
-      <class name="com.qa.tests.ProductTests">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qa.tests.ProductTests@63376bed]" started-at="2021-05-21T23:32:00 IST" name="setup" finished-at="2021-05-21T23:32:11 IST" duration-ms="11315" status="PASS">
+    <test started-at="2021-05-24T21:34:09 IST" name="Test" finished-at="2021-05-24T21:34:57 IST" duration-ms="47933">
+      <class name="com.qa.tests.LoginTests">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.qa.tests.LoginTests@4ae33a11]" started-at="2021-05-24T21:34:07 IST" name="beforeSuite" finished-at="2021-05-24T21:34:09 IST" duration-ms="2402" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qa.tests.LoginTests@4ae33a11]" started-at="2021-05-24T21:34:09 IST" name="setup" finished-at="2021-05-24T21:34:31 IST" duration-ms="21241" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -28,83 +38,194 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.qa.tests.ProductTests@63376bed]" started-at="2021-05-21T23:32:11 IST" name="beforeClass" finished-at="2021-05-21T23:32:14 IST" duration-ms="2599" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.qa.tests.LoginTests@4ae33a11]" started-at="2021-05-24T21:34:31 IST" name="beforeClass" finished-at="2021-05-24T21:34:31 IST" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.qa.tests.ProductTests@63376bed]" started-at="2021-05-21T23:32:14 IST" name="beforeMethod" finished-at="2021-05-21T23:32:15 IST" duration-ms="765" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.qa.tests.LoginTests@4ae33a11]" started-at="2021-05-24T21:34:31 IST" name="beforeMethod" finished-at="2021-05-24T21:34:31 IST" duration-ms="613" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.qa.tests.ProductTests@63376bed]" started-at="2021-05-21T23:32:15 IST" name="beforeMethod" finished-at="2021-05-21T23:32:19 IST" duration-ms="3975" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.qa.tests.LoginTests@4ae33a11]" started-at="2021-05-24T21:34:31 IST" name="beforeMethod" finished-at="2021-05-24T21:34:31 IST" duration-ms="205" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.qa.tests.ProductTests.validateProductOnProductDetailsPage()]]>
+                <![CDATA[public void com.qa.tests.LoginTests.invalidPasswordTest()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="validateProductOnProductDetailsPage()[pri:0, instance:com.qa.tests.ProductTests@63376bed]" started-at="2021-05-21T23:32:19 IST" name="validateProductOnProductDetailsPage" finished-at="2021-05-21T23:32:27 IST" duration-ms="8399" status="PASS">
+        <test-method signature="invalidPasswordTest()[pri:0, instance:com.qa.tests.LoginTests@4ae33a11]" started-at="2021-05-24T21:34:31 IST" name="invalidPasswordTest" finished-at="2021-05-24T21:34:37 IST" duration-ms="5845" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateProductOnProductDetailsPage -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.qa.tests.ProductTests@63376bed]" started-at="2021-05-21T23:32:27 IST" name="afterMethod" finished-at="2021-05-21T23:32:30 IST" duration-ms="3335" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.qa.tests.ProductTests@63376bed]" started-at="2021-05-21T23:32:30 IST" name="afterMethod" finished-at="2021-05-21T23:32:33 IST" duration-ms="2342" status="PASS">
+        </test-method> <!-- invalidPasswordTest -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.qa.tests.LoginTests@4ae33a11]" started-at="2021-05-24T21:34:37 IST" name="afterMethod" finished-at="2021-05-24T21:34:38 IST" duration-ms="865" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validateProductOnProductDetailsPage status=SUCCESS method=ProductTests.validateProductOnProductDetailsPage()[pri:0, instance:com.qa.tests.ProductTests@63376bed] output={null}]]]>
+                <![CDATA[[TestResult name=invalidPasswordTest status=SUCCESS method=LoginTests.invalidPasswordTest()[pri:0, instance:com.qa.tests.LoginTests@4ae33a11] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.qa.tests.ProductTests@63376bed]" started-at="2021-05-21T23:32:33 IST" name="beforeMethod" finished-at="2021-05-21T23:32:34 IST" duration-ms="711" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.qa.tests.LoginTests@4ae33a11]" started-at="2021-05-24T21:34:38 IST" name="beforeMethod" finished-at="2021-05-24T21:34:39 IST" duration-ms="542" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.qa.tests.ProductTests@63376bed]" started-at="2021-05-21T23:32:34 IST" name="beforeMethod" finished-at="2021-05-21T23:32:36 IST" duration-ms="2485" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.qa.tests.LoginTests@4ae33a11]" started-at="2021-05-24T21:34:39 IST" name="beforeMethod" finished-at="2021-05-24T21:34:39 IST" duration-ms="4" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.qa.tests.ProductTests.validateProductOnProductsPage()]]>
+                <![CDATA[public void com.qa.tests.LoginTests.invalidUsernameTest()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="validateProductOnProductsPage()[pri:0, instance:com.qa.tests.ProductTests@63376bed]" started-at="2021-05-21T23:32:36 IST" name="validateProductOnProductsPage" finished-at="2021-05-21T23:32:38 IST" duration-ms="1814" status="PASS">
+        <test-method signature="invalidUsernameTest()[pri:0, instance:com.qa.tests.LoginTests@4ae33a11]" started-at="2021-05-24T21:34:39 IST" name="invalidUsernameTest" finished-at="2021-05-24T21:34:41 IST" duration-ms="2282" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateProductOnProductsPage -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.qa.tests.ProductTests@63376bed]" started-at="2021-05-21T23:32:38 IST" name="afterMethod" finished-at="2021-05-21T23:32:40 IST" duration-ms="2379" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.qa.tests.ProductTests@63376bed]" started-at="2021-05-21T23:32:40 IST" name="afterMethod" finished-at="2021-05-21T23:32:42 IST" duration-ms="1663" status="PASS">
+        </test-method> <!-- invalidUsernameTest -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.qa.tests.LoginTests@4ae33a11]" started-at="2021-05-24T21:34:41 IST" name="afterMethod" finished-at="2021-05-24T21:34:42 IST" duration-ms="837" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validateProductOnProductsPage status=SUCCESS method=ProductTests.validateProductOnProductsPage()[pri:0, instance:com.qa.tests.ProductTests@63376bed] output={null}]]]>
+                <![CDATA[[TestResult name=invalidUsernameTest status=SUCCESS method=LoginTests.invalidUsernameTest()[pri:0, instance:com.qa.tests.LoginTests@4ae33a11] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.tests.ProductTests@63376bed]" started-at="2021-05-21T23:32:42 IST" name="tearDown" finished-at="2021-05-21T23:32:43 IST" duration-ms="634" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.qa.tests.LoginTests@4ae33a11]" started-at="2021-05-24T21:34:42 IST" name="beforeMethod" finished-at="2021-05-24T21:34:42 IST" duration-ms="496" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.qa.tests.LoginTests@4ae33a11]" started-at="2021-05-24T21:34:42 IST" name="beforeMethod" finished-at="2021-05-24T21:34:42 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.qa.tests.LoginTests.validLoginTest()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="validLoginTest()[pri:0, instance:com.qa.tests.LoginTests@4ae33a11]" started-at="2021-05-24T21:34:42 IST" name="validLoginTest" finished-at="2021-05-24T21:34:55 IST" duration-ms="12897" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Located by By.chained({By.xpath: //android.view.ViewGroup[@content-desc="test-Cart drop zone"]/android.view.ViewGroup/android.widget.TextView}) (tried for 10 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Located by By.chained({By.xpath: //android.view.ViewGroup[@content-desc="test-Cart drop zone"]/android.view.ViewGroup/android.widget.TextView}) (tried for 10 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at com.qa.BaseTest.waitForVisibility(BaseTest.java:192)
+at com.qa.BaseTest.getAttribute(BaseTest.java:206)
+at com.qa.pages.ProductsPage.getHeaderText(ProductsPage.java:21)
+at com.qa.tests.LoginTests.validLoginTest(LoginTests.java:76)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({By.xpath: //android.view.ViewGroup[@content-desc="test-Cart drop zone"]/android.view.ViewGroup/android.widget.TextView})
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.isDisplayed(<generated>)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 32 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@32e54a9d (tried for 1 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+... 39 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.xpath: //android.view.ViewGroup[@content-desc="test-Cart drop zone"]/android.view.ViewGroup/android.widget.TextView})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SHASHANK-HP360', ip: '172.19.128.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.8'
+Driver info: driver.version: AndroidDriver
+at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 41 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+            <line>
+              <![CDATA[This is the sample screenshot.]]>
+            </line>
+            <line>
+              <![CDATA[<a href='C:\Users\shash\eclipse-workspace\AppiumTDDFramework\Screenshots\Android_11.0_Pixel_3\2021-05-24-21-34-09\LoginTests\validLoginTest.png'><img src='C:\Users\shash\eclipse-workspace\AppiumTDDFramework\Screenshots\Android_11.0_Pixel_3\2021-05-24-21-34-09\LoginTests\validLoginTest.png' width='200' /></a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validLoginTest -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.qa.tests.LoginTests@4ae33a11]" started-at="2021-05-24T21:34:56 IST" name="afterMethod" finished-at="2021-05-24T21:34:57 IST" duration-ms="994" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validLoginTest status=FAILURE method=LoginTests.validLoginTest()[pri:0, instance:com.qa.tests.LoginTests@4ae33a11] output=This is the sample screenshot.]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.tests.LoginTests@4ae33a11]" started-at="2021-05-24T21:34:57 IST" name="tearDown" finished-at="2021-05-24T21:34:57 IST" duration-ms="277" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.tests.ProductTests -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.qa.tests.LoginTests@4ae33a11]" started-at="2021-05-24T21:34:57 IST" name="afterSuite" finished-at="2021-05-24T21:34:57 IST" duration-ms="59" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.qa.tests.LoginTests -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

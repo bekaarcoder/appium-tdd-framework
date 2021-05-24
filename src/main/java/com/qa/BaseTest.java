@@ -20,8 +20,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
@@ -35,6 +37,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.screenrecording.CanRecordScreen;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
 import okhttp3.internal.platform.Platform;
 
 public class BaseTest {
@@ -43,6 +46,7 @@ public class BaseTest {
 	protected static ThreadLocal<Properties> props = new ThreadLocal<Properties>();
 	protected static ThreadLocal<HashMap<String, String>> strings = new ThreadLocal<HashMap<String, String>>();
 	protected static ThreadLocal<String> dateTime = new ThreadLocal<String>();
+	private static AppiumDriverLocalService server;
 	TestUtils utils;
 	static Logger log = LogManager.getLogger(BaseTest.class.getName());
 	
@@ -81,6 +85,18 @@ public class BaseTest {
 	public BaseTest() {
 		PageFactory.initElements(new AppiumFieldDecorator(getDriver()), this);
 	}
+	
+	@BeforeSuite
+	public void beforeSuite() {
+		server = getAppiumServerDefault();
+		server.stop();
+		if(!server.isRunning()) {
+			server.start();
+			System.out.println("*****Appium Server Started*****");
+		} else {
+			System.out.println("*****Appium Server is running*****");
+		}
+	}
 
 	@Parameters({ "platformName", "platformVersion", "deviceName" })
 	@BeforeTest
@@ -108,8 +124,7 @@ public class BaseTest {
 			caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, props.getProperty("androidAutomationName"));
 			caps.setCapability("appPackage", props.getProperty("androidAppPackage"));
 			caps.setCapability("appActivity", props.getProperty("androidAppActivity"));
-			URL appURL = getClass().getClassLoader().getResource(props.getProperty("androidAppLocation"));
-//			caps.setCapability("app", "C:\\Users\\shash\\Downloads\\Android.SauceLabs.Mobile.Sample.app.2.7.1.apk");
+			String appURL = System.getProperty("user.dir") + File.separator + "src\\test\\resources\\app\\Android.SauceLabs.Mobile.Sample.app.2.7.1.apk";
 			caps.setCapability("app", appURL);
 
 			URL url = new URL(props.getProperty("appiumURL"));
@@ -117,6 +132,7 @@ public class BaseTest {
 			driver = new AndroidDriver<MobileElement>(url, caps);
 			MobileDriver.setMobileDriver(driver);;
 			String sessionId = driver.getSessionId().toString();
+			utils.log().info("Session ID: " + sessionId);
 			setDriver(driver);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -166,6 +182,10 @@ public class BaseTest {
 			}
 		}
 	}
+	
+	public AppiumDriverLocalService getAppiumServerDefault() {
+		return AppiumDriverLocalService.buildDefaultService();
+	}
 
 	public void waitForVisibility(MobileElement e) {
 		WebDriverWait wait = new WebDriverWait(getDriver(), TestUtils.WAIT);
@@ -209,6 +229,12 @@ public class BaseTest {
 	@AfterTest
 	public void tearDown() {
 		getDriver().quit();
+	}
+	
+	@AfterSuite
+	public void afterSuite() {
+		server.stop();
+		System.out.println("*****Appium Server Stopped*****");
 	}
 
 }
